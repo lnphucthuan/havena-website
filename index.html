@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Havena — Curated Homes in Portugal, Greece &amp; Croatia</title>
+  <meta name="description" content="Havena curates residential investments by the sea, in green communities, in historic city centres and one-of-a-kind homes across southern Europe.">
+  <meta name="theme-color" content="#1e2a5a">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231e2a5a'/%3E%3Cpath d='M9 19a7 7 0 0 1 14 0' fill='none' stroke='%23fff' stroke-width='2.4'/%3E%3Cpath d='M6 19h20' stroke='%23fff' stroke-width='2.4'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,400;125,500&family=Fraunces:opsz,wght@9..144,300;9..144,400&family=Instrument+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    (function (d) {
+      d.classList.add('is-loading');
+      try {
+        var c = sessionStorage.getItem('hv-cover');
+        if (c) { sessionStorage.removeItem('hv-cover'); d.classList.add('is-covered'); d.style.setProperty('--cover', c); }
+        if (c || sessionStorage.getItem('hv-seen') || location.hash === '#selection') d.classList.add('no-preload');
+      } catch (e) {}
+      setTimeout(function () { d.classList.remove('is-loading'); }, 5000);
+    })(document.documentElement);
+  </script>
+  <style>.no-preload .preloader { display: none; }</style>
+</head>
+<body class="page-home">
+
+  <div class="preloader" aria-hidden="true">
+    <div class="preloader__bg"></div>
+    <div class="media-sq"></div>
+    <div class="preloader__count">
+      <span class="digit"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span></span>
+      <span class="digit"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span></span>
+    </div>
+  </div>
+
+  <nav class="selection" id="selection" aria-label="Our selection"></nav>
+
+  <main class="stage" id="stage">
+    <header class="site-header">
+      <a class="nav-link" href="about.html">About</a>
+      <a class="logo" href="index.html" aria-label="Havena, home"><span class="mark" aria-hidden="true"></span>Havena</a>
+      <a class="nav-link" href="contact.html">Contact</a>
+    </header>
+
+    <section class="hero">
+      <h1 class="sr-only">Havena — Live Beautifully. Curated residential investments in Portugal, Greece and Croatia.</h1>
+      <div class="marquee" data-text="Live Beautifully" aria-hidden="true">
+        <div class="marquee__inner"><div class="marquee__track"><span class="marquee__item">Live Beautifully</span></div></div>
+      </div>
+      <div class="media-sq hero__media">
+        <img src="assets/img/sm/1613490493576-7fde63acd811.jpg" alt="Modern villa with a pool at dusk">
+      </div>
+      <div class="hero__copy">
+        <p class="hero__sub">Curated residential investments in<br>Portugal, Greece and Croatia.</p>
+        <span class="tag wide">From €120,000</span>
+      </div>
+      <p class="hero__foot">Havena © 2026</p>
+    </section>
+
+    <button class="stage__hit" type="button" aria-label="Back to the intro"></button>
+  </main>
+
+  <div class="dock">
+    <a class="btn-sel" href="#selection" data-no-transition>Our Selection <span class="dots" aria-hidden="true"><i></i><i></i><i></i><i></i></span></a>
+    <button class="btn-menu" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+  </div>
+
+  <div class="menu" id="menu" aria-hidden="true">
+    <div class="menu__scrim"></div>
+    <div class="menu__panel" role="dialog" aria-label="Site menu">
+      <ul class="menu__links serif">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="menu__foot">
+        <span><a href="tel:+351000000000"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 1h2l1 2.6-1.3.9a6 6 0 0 0 3.6 3.6l.9-1.3 2.6 1v2a1.2 1.2 0 0 1-1.2 1.2A9.8 9.8 0 0 1 1 2.2 1.2 1.2 0 0 1 2.2 1z" fill="currentColor"/></svg>Call us</a></span>
+        <span><a href="mailto:hello@havena.example"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M1 2.5h10v7H1z" fill="none" stroke="currentColor"/><path d="M1 2.8l5 3.7 5-3.7" fill="none" stroke="currentColor"/></svg>Email</a></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="cover" aria-hidden="true"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/core.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>
